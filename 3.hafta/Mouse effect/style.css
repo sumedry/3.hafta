@@ -1,0 +1,52 @@
+body{
+    height: 100vh;
+    box-sizing: border-box;
+    cursor: none;
+    background-color: #222;
+}
+
+.cursor-dot{
+    width: 5px;
+    height: 5px;
+    background-color: #fff;
+}
+
+.cursor-border{
+    width: 60px;
+    height: 60px;
+    border: 3px solid #fff;
+}
+
+.cursor-border, .cursor-dot{
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: translate(-50%,-50%);
+    border-radius: 50% ;
+    pointer-events: none;
+}
+
+[data-cursor-dot] {
+  position: fixed;
+  width: 40px;
+  height: 40px;
+  background: url("https://upload.wikimedia.org/wikipedia/commons/b/b4/Flag_of_Turkey.svg");
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+}
+
+[data-cursor-border] {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  background: rgba(255, 255, 255, 0.2); /* opsiyonel çerçeve efekti */
+  border: 2px solid red;
+  border-radius: 50%;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  z-index: 9998;
+}
